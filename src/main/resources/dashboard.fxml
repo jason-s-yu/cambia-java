@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="498.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.jasonyu.cambia.controllers.DashboardController">
+    <children>
+        <Pane layoutX="13.0" layoutY="15.0" prefHeight="371.0" prefWidth="470.0">
+            <children>
+                <Text layoutX="175.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CAMBIA" textAlignment="CENTER" wrappingWidth="119.2099609375">
+                    <font>
+                        <Font size="30.0" />
+                    </font>
+                </Text>
+            <JFXButton fx:id="matchmakingButton" layoutX="148.0" layoutY="141.0" onAction="#onMatchmakingClick" prefHeight="27.0" prefWidth="176.0" style="-fx-background-color: #673ab7;" text="MATCHMAKING" textFill="WHITE" />
+            <JFXButton fx:id="createLobbyButton" layoutX="148.0" layoutY="187.0" onAction="#onCreateClick" prefHeight="27.0" prefWidth="176.0" style="-fx-background-color: #673ab7#673ab7;" text="CREATE LOBBY" textFill="WHITE" />
+            <JFXTextField fx:id="joinCodeForm" focusColor="#673ab7" labelFloat="true" layoutX="148.0" layoutY="233.0" onAction="#onEnter" prefHeight="27.0" prefWidth="137.0" promptText="Enter join code">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="joinButton" layoutX="297.0" layoutY="235.0" onAction="#onJoinLobbyClick" style="-fx-background-color: #673ab7#673ab7 #673ab7#673ab7;" text="&gt;" textFill="WHITE" />
+            <JFXSpinner fx:id="joinSpinner" layoutX="297.0" layoutY="235.0" prefHeight="27.0" prefWidth="26.0" visible="false" />
+            <JFXSpinner fx:id="matchmakingSpinner" layoutX="205.0" layoutY="175.0" prefHeight="50.0" prefWidth="60.0" visible="false" />
+            <JFXButton fx:id="cancelButton" layoutX="148.0" layoutY="276.0" onAction="#onCancelClick" prefHeight="27.0" prefWidth="176.0" style="-fx-background-color: #e6ceff#e6ceff;" text="Cancel" visible="false" />
+            <Text fx:id="timeElapsedLabel" layoutX="165.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time elapsed:" textAlignment="RIGHT" visible="false" />
+            <Text fx:id="timeElapsed" layoutX="268.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00:00" visible="false" />
+            <Text fx:id="matchFoundLabel" fill="#673ab7" layoutX="180.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Match found!" textAlignment="CENTER" visible="false">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <JFXButton fx:id="confirmButton" layoutX="148.0" layoutY="162.0" onAction="#onConfirmClick" prefHeight="27.0" prefWidth="176.0" style="-fx-background-color: #673ab7;" text="CONFIRM" textFill="WHITE" visible="false" />
+            <Text fx:id="waitingForOpponent" fill="#673ab7" layoutX="155.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Waiting for opponent..." textAlignment="CENTER" visible="false">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

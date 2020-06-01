@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXScrollPane?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.jasonyu.cambia.controllers.GameController">
+   <children>
+      <Pane layoutX="15.0" layoutY="15.0" prefHeight="570.0" prefWidth="770.0">
+         <children>
+            <JFXScrollPane layoutX="20.0" layoutY="14.0" prefHeight="468.0" prefWidth="730.0" />
+            <JFXTextArea fx:id="chatField" focusColor="#673ab7" layoutX="20.0" layoutY="499.0" prefHeight="57.0" prefWidth="652.0" promptText="Type a message..." />
+            <JFXButton fx:id="sendButton" layoutX="682.0" layoutY="513.0" prefHeight="30.0" prefWidth="66.0" style="-fx-background-color: #673ab7#673ab7;" text="Send" textFill="WHITE" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

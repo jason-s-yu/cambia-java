@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="439.0" prefWidth="498.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.jasonyu.cambia.controllers.RegisterController">
+    <children>
+        <Pane layoutX="14.0" layoutY="14.0" prefHeight="409.0" prefWidth="470.0">
+            <children>
+                <JFXTextField fx:id="email" alignment="TOP_LEFT" focusColor="#673ab7" labelFloat="true" layoutX="108.0" layoutY="97.0" prefHeight="18.0" prefWidth="254.0" promptText="Email address">
+               <font>
+                  <Font size="12.0" />
+               </font></JFXTextField>
+                <JFXPasswordField fx:id="password" focusColor="#673ab7" labelFloat="true" layoutX="108.0" layoutY="132.0" prefHeight="13.0" prefWidth="254.0" promptText="Password">
+               <font>
+                  <Font size="12.0" />
+               </font></JFXPasswordField>
+            <JFXPasswordField fx:id="passwordConfirm" focusColor="#673ab7" labelFloat="true" layoutX="108.0" layoutY="175.0" prefHeight="13.0" prefWidth="254.0" promptText="Confirm password">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXProgressBar fx:id="strengthIndicator" layoutX="108.0" layoutY="163.0" prefHeight="6.0" prefWidth="254.0" progress="0.0" />
+            <JFXTextField fx:id="username" alignment="TOP_LEFT" focusColor="#673ab7" labelFloat="true" layoutX="108.0" layoutY="222.0" prefHeight="18.0" prefWidth="254.0" promptText="Username">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </JFXTextField>
+                <JFXButton fx:id="createAccountButton" layoutX="108.0" layoutY="300.0" onAction="#onCreateClick" prefHeight="27.0" prefWidth="254.0" style="-fx-background-color: #673ab7#673ab7;" text="Create account" textFill="WHITE" />
+            <JFXButton fx:id="backButton" layoutX="108.0" layoutY="336.0" onAction="#onBackClick" prefHeight="27.0" prefWidth="254.0" style="-fx-background-color: #9a67ea#9a67ea;" text="Back" textFill="WHITE" />
+                <Text fx:id="invalidTooltip" fill="#ef5350" layoutX="215.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid credentials" visible="false">
+                    <font>
+                        <Font size="12.0" />
+                    </font>
+                </Text>
+                <Text layoutX="175.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign up" textAlignment="CENTER" wrappingWidth="119.2099609375">
+                    <font>
+                        <Font size="30.0" />
+                    </font>
+                </Text>
+                <JFXProgressBar fx:id="loading" layoutX="108.0" layoutY="273.0" prefHeight="6.0" prefWidth="91.0" visible="false" />
+            <Text fx:id="passwordMatchError" fill="#ef5350" layoutX="235.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Passwords do not match" textAlignment="RIGHT" visible="false">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Text>
+            <Text fill="#868686" layoutX="108.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="By creating an account you agree to sell your soul to us and to award full marks for this project." wrappingWidth="254.0">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Text fx:id="errorMessage" fill="#ef5350" layoutX="108.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" visible="false" wrappingWidth="254.0">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Text>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>
